@@ -20,11 +20,13 @@ module.exports = function(){
 	app.multer  		= require('multer');
 	// Arquivo de configuracoes
   	// app.config 			= require('./config')();
+	//https://github.com/joeferner/node-java
+	app.java  		= require('java');
 
 	//Teste
 	var teste = {};
 	teste.controllers = {};
-	teste.controllers.teste = require(__dirname + '/modules/teste/teste-controller.js')();
+	teste.controllers.teste = require(__dirname + '/modules/teste/teste-controller.js')(app.java);
 
 	//Middleware
 	// var middleware = {};
